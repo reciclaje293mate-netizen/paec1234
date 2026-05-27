@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matemáticas del Reciclaje</title>
+  <link rel="stylesheet" href="https://r.mobirisesite.com/2686036/assets/bootstrap/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: 'Manrope', sans-serif;
+      background: #f5f5f5;
+    }
+    .hero {
+      background: #000;
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .hero h1 { font-size: 3rem; font-weight: 700; }
+    .hero p { font-size: 1.2rem; }
+    .section { padding: 60px 20px; }
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+    .card {
+      border-radius: 12px;
+      padding: 30px;
+      background: #fff;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+    }
+    .formula-box {
+      background: #000;
+      color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 1.3rem;
+      text-align: center;
+      margin: 10px 0;
+    }
+    .calc-result {
+      background: #f0f0f0;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 15px;
+    }
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #000;
+    }
+    .exercise {
+      background: #fff;
+      border-left: 5px solid #000;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-radius: 0 10px 10px 0;
+    }
+    .exercise .answer {
+      display: none;
+      background: #e8f5e9;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    .btn-black {
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .btn-black:hover { background: #333; color: #fff; }
+    .btn-saber {
+      background: #fff;
+      color: #000;
+      border: 2px solid #fff;
+      padding: 12px 35px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-saber:hover { background: #000; color: #fff; border-color: #fff; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th {
+      background: #000;
+      color: #fff;
+      padding: 12px;
+    }
+    td {
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+    }
+    tr:hover { background: #f5f5f5; }
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>📐 Matemáticas del Reciclaje</h1>
+  <p>Fórmulas, calculadoras, ejercicios, gráficas y estadísticas</p>
+  <p style="opacity:0.6;">Grupo 2do AMC — Naim, Ela, Ana, Bryan y Jared</p>
+  <a class="btn-saber" href="https://reciclaje293mate-netizen.github.io/bastardita-tortas/" target="_blank">Saber más</a>
+</div>
+
+<!-- ESTADÍSTICAS -->
+<div class="section" style="background:#fff;">
+  <div class="container">
+    <h2 class="section-title">📊 Estadísticas de Reciclaje</h2>
+    <div class="row text-center">
+      <div class="col-12 col-md-3 mb-4">
+        <div class="card">
+          <div class="stat-number">500 kg</div>
+          <p>Reciclados en un mes</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-3 mb-4">
+        <div class="card">
+          <div class="stat-number">70%</div>
+          <p>Reducción de residuos</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-3 mb-4">
+        <div class="card">
+          <div class="stat-number">20 hrs</div>
+          <p>De voluntariado</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-3 mb-4">
+        <div class="card">
+          <div class="stat-number">5</div>
+          <p>Integrantes del grupo</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FÓRMULAS -->
+<div class="section" style="background:#f5f5f5;">
+  <div class="container">
+    <h2 class="section-title">📝 Fórmulas Matemáticas</h2>
+    <div class="row">
+      <div class="col-12 col-md-6 mb-4">
+        <div class="card">
+          <h5><strong>Porcentaje de reciclaje</strong></h5>
+          <div class="formula-box">% = (Material reciclado ÷ Total) × 100</div>
+          <p class="mt-3">Ejemplo: Si reciclamos 500 kg de 700 kg totales:<br>
+          % = (500 ÷ 700) × 100 = <strong>71.4%</strong></p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 mb-4">
+        <div class="card">
+          <h5><strong>Promedio de reciclaje por persona</strong></h5>
+          <div class="formula-box">Promedio = Total ÷ Número de personas</div>
+          <p class="mt-3">Ejemplo: 500 kg entre 5 personas:<br>
+          Promedio = 500 ÷ 5 = <strong>100 kg por persona</strong></p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 mb-4">
+        <div class="card">
+          <h5><strong>CO₂ ahorrado</strong></h5>
+          <div class="formula-box">CO₂ = kg reciclados × 2.5</div>
+          <p class="mt-3">Ejemplo: 500 kg reciclados:<br>
+          CO₂ = 500 × 2.5 = <strong>1,250 kg de CO₂ ahorrados</strong></p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 mb-4">
+        <div class="card">
+          <h5><strong>Tasa de crecimiento</strong></h5>
+          <div class="formula-box">TC = ((Valor final - Valor inicial) ÷ Valor inicial) × 100</div>
+          <p class="mt-3">Ejemplo: De 400 kg a 500 kg:<br>
+          TC = ((500 - 400) ÷ 400) × 100 = <strong>25% de crecimiento</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CALCULADORA -->
+<div class="section" style="background:#fff;">
+  <div class="container">
+    <h2 class="section-title">🧮 Calculadora de Reciclaje</h2>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8">
+        <div class="card">
+          <div class="mb-3">
+            <label class="form-label"><strong>Material total generado (kg)</strong></label>
+            <input type="number" id="total" class="form-control" placeholder="Ej: 700">
+          </div>
+          <div class="mb-3">
+            <label class="form-label"><strong>Material reciclado (kg)</strong></label>
+            <input type="number" id="reciclado" class="form-control" placeholder="Ej: 500">
+          </div>
+          <div class="mb-3">
+            <label class="form-label"><strong>Número de personas</strong></label>
+            <input type="number" id="personas" class="form-control" placeholder="Ej: 5">
+          </div>
+          <button class="btn-black w-100" onclick="calcular()">Calcular</button>
+          <div id="resultado" class="mt-3" style="display:none;">
+            <div class="calc-result" id="res1"></div>
+            <div class="calc-result mt-2" id="res2"></div>
+            <div class="calc-result mt-2" id="res3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GRÁFICAS -->
+<div class="section" style="background:#f5f5f5;">
+  <div class="container">
+    <h2 class="section-title">📈 Gráficas</h2>
+    <div class="row">
+      <div class="col-12 col-md-6 mb-4">
+        <div class="card">
+          <h5 class="text-center mb-3"><strong>Tipos de material reciclado</strong></h5>
+          <canvas id="graficaPastel"></canvas>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 mb-4">
+        <div class="card">
+          <h5 class="text-center mb-3"><strong>Reciclaje por mes (kg)</strong></h5>
+          <canvas id="graficaBarras"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TABLA -->
+<div class="section" style="background:#fff;">
+  <div class="container">
+    <h2 class="section-title">📋 Tabla de Datos</h2>
+    <div class="card">
+      <table>
+        <tr>
+          <th>Integrante</th>
+          <th>kg Reciclados</th>
+          <th>% del Total</th>
+          <th>CO₂ Ahorrado (kg)</th>
+          <th>Horas Voluntariado</th>
+        </tr>
+        <tr><td>Naim</td><td>110</td><td>22%</td><td>275</td><td>4</td></tr>
+        <tr><td>Ela</td><td>105</td><td>21%</td><td>262.5</td><td>4</td></tr>
+        <tr><td>Ana</td><td>95</td><td>19%</td><td>237.5</td><td>4</td></tr>
+        <tr><td>Bryan</td><td>100</td><td>20%</td><td>250</td><td>4</td></tr>
+        <tr><td>Jared</td><td>90</td><td>18%</td><td>225</td><td>4</td></tr>
+        <tr style="background:#000;color:#fff;font-weight:700;">
+          <td>TOTAL</td><td>500</td><td>100%</td><td>1,250</td><td>20</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- EJERCICIOS -->
+<div class="section" style="background:#f5f5f5;">
+  <div class="container">
+    <h2 class="section-title">✏️ Ejercicios</h2>
+    <div class="col-12 col-lg-8 mx-auto">
+
+      <div class="exercise">
+        <p><strong>Ejercicio 1:</strong> Si en enero se reciclaron 400 kg y en febrero 500 kg, ¿cuál es el porcentaje de aumento?</p>
+        <button class="btn-black" onclick="mostrarRespuesta('r1')">Ver respuesta</button>
+        <div class="answer" id="r1">
+          TC = ((500 - 400) ÷ 400) × 100 = <strong>25%</strong> de aumento
+        </div>
+      </div>
+
+      <div class="exercise">
+        <p><strong>Ejercicio 2:</strong> El grupo recicló 500 kg en 5 días. ¿Cuántos kg reciclaron por día en promedio?</p>
+        <button class="btn-black" onclick="mostrarRespuesta('r2')">Ver respuesta</button>
+        <div class="answer" id="r2">
+          Promedio = 500 ÷ 5 = <strong>100 kg por día</strong>
+        </div>
+      </div>
+
+      <div class="exercise">
+        <p><strong>Ejercicio 3:</strong> De 800 kg de basura generada, se reciclaron 500 kg. ¿Qué porcentaje se recicló?</p>
+        <button class="btn-black" onclick="mostrarRespuesta('r3')">Ver respuesta</button>
+        <div class="answer" id="r3">
+          % = (500 ÷ 800) × 100 = <strong>62.5%</strong>
+        </div>
+      </div>
+
+      <div class="exercise">
+        <p><strong>Ejercicio 4:</strong> Si cada kg reciclado ahorra 2.5 kg de CO₂, ¿cuánto CO₂ ahorraron con 500 kg?</p>
+        <button class="btn-black" onclick="mostrarRespuesta('r4')">Ver respuesta</button>
+        <div class="answer" id="r4">
+          CO₂ = 500 × 2.5 = <strong>1,250 kg de CO₂ ahorrados</strong>
+        </div>
+      </div>
+
+      <div class="exercise">
+        <p><strong>Ejercicio 5:</strong> Si el grupo recicla 500 kg al mes, ¿cuántos kg reciclarán en un año?</p>
+        <button class="btn-black" onclick="mostrarRespuesta('r5')">Ver respuesta</button>
+        <div class="answer" id="r5">
+          Total = 500 × 12 = <strong>6,000 kg al año</strong>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Grupo 2do AMC — Naim, Ela , Ana, Bryan y Jared</p>
+  <p>Todos los derechos reservados.</p>
+</footer>
+
+<script>
+function calcular() {
+  const total = parseFloat(document.getElementById('total').value);
+  const reciclado = parseFloat(document.getElementById('reciclado').value);
+  const personas = parseFloat(document.getElementById('personas').value);
+  if (!total || !reciclado || !personas) { alert('Por favor llena todos los campos'); return; }
+  const porcentaje = ((reciclado / total) * 100).toFixed(2);
+  const promedio = (reciclado / personas).toFixed(2);
+  const co2 = (reciclado * 2.5).toFixed(2);
+  document.getElementById('res1').innerHTML = '♻️ Porcentaje reciclado: <strong>' + porcentaje + '%</strong>';
+  document.getElementById('res2').innerHTML = '👤 Promedio por persona: <strong>' + promedio + ' kg</strong>';
+  document.getElementById('res3').innerHTML = '🌱 CO₂ ahorrado: <strong>' + co2 + ' kg</strong>';
+  document.getElementById('resultado').style.display = 'block';
+}
+function mostrarRespuesta(id) {
+  const el = document.getElementById(id);
+  el.style.display = el.style.display === 'block' ? 'none' : 'block';
+}
+const ctx1 = document.getElementById('graficaPastel').getContext('2d');
+new Chart(ctx1, {
+  type: 'pie',
+  data: {
+    labels: ['Plástico', 'Papel', 'Vidrio', 'Metal', 'Orgánico'],
+    datasets: [{ data: [35, 25, 15, 15, 10], backgroundColor: ['#000', '#444', '#777', '#aaa', '#ddd'] }]
+  }
+});
+const ctx2 = document.getElementById('graficaBarras').getContext('2d');
+new Chart(ctx2, {
+  type: 'bar',
+  data: {
+    labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo'],
+    datasets: [{ label: 'kg reciclados', data: [300, 380, 420, 460, 500], backgroundColor: '#000' }]
+  },
+  options: { scales: { y: { beginAtZero: true } } }
+});
+</script>
+
+</body>
+</html>
